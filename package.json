@@ -14,6 +14,6 @@
     "dotenv": "^8.2.0"
   },
   "scripts": {
-    "build": "javascript build --output public"
+    "build": "node build --output public"
   }
 }
