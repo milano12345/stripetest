@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.static("public"));
 app.listen(3000);
 
-app.get("/", (req, res) => {
+app.get("/hello", (req, res) => {
   console.log("server is running");
 });
 
