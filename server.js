@@ -11,10 +11,10 @@ const app = express();
 const fs = require("fs");
 
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
-app.use(express.static(path.join(__dirname, "public")));
+// rnapp.set("views", path.join(__dirname, "views"));
+//app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
-// app.use(express.static("public"));
+app.use(express.static("public"));
 app.listen(3000);
 
 app.get("/", (req, res) => {
@@ -55,3 +55,5 @@ app.post("/purchase", (req, res) => {
     }
   });
 });
+
+module.exports = app;
