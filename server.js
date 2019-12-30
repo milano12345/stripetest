@@ -15,6 +15,10 @@ app.use(express.json());
 app.use(express.static("public"));
 app.listen(3000);
 
+app.get("/", (req, res) => {
+  console.log("server is running");
+});
+
 app.get("/store", (req, res) => {
   fs.readFile("items.json", function(error, data) {
     if (error) {
