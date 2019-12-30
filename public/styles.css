@@ -96,12 +96,14 @@ body {
   height: 200px;
   width: 200px;
   margin: 15px;
-  border-radius: 50%;
+  border-radius: 0;
 }
 
 .main-footer {
-  background-color: #56ccf2;
-  color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-image: url("Images/Header Background.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
   padding: 0.25em 0;
 }
 
