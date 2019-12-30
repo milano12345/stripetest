@@ -17,7 +17,7 @@
     "dotenv": "^8.2.0"
   },
   "scripts": {
-    "build": "echo 'build script executed",
+    "build": "mkdir -p public && touch public/index.html",
     "start": "node index.js"
   }
 }
