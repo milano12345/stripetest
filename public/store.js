@@ -32,32 +32,32 @@ var stripeHandler = StripeCheckout.configure({
   key: stripePublicKey,
   locale: "en",
   token: function(token) {
-    var items = []
-    var cartItemContainer = document.getElementsByClassName('cart-items')[0]
-    var carRows = cartItemContainer.getElementsByClassName('cart-row')
+    var items = [];
+    var cartItemContainer = document.getElementsByClassName("cart-items")[0];
+    var cartRows = cartItemContainer.getElementsByClassName("cart-row");
     for (var i = 0; i < cartRows.length; i++) {
-        var carRow = cartRows[i]
-        var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
-        var quantity = quantityElement.value
-        var id = cartRow.dataset.itemId
-        items.push({
-            id: id,
-            quantity: quantity
-        })
-
+      var cartRow = cartRows[i];
+      var quantityElement = cartRow.getElementsByClassName(
+        "cart-quantity-input"
+      )[0];
+      var quantity = quantityElement.value;
+      var id = cartRow.dataset.itemId;
+      items.push({
+        id: id,
+        quantity: quantity
+      });
     }
-
-    fetch('/purchase', {
-        method: 'POST',
-        headers: {
-            'Content-Type':'application/json',
-            'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-            stripeTokenId: token.id,
-            items: items
-        })
-    })
+    fetch("/purchase", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: JSON.stringify({
+        stripeTokenId: token.id,
+        items: items
+      })
+    });
   }
 });
 
@@ -95,7 +95,7 @@ function addToCartClicked(event) {
   var title = shopItem.getElementsByClassName("shop-item-title")[0].innerText;
   var price = shopItem.getElementsByClassName("shop-item-price")[0].innerText;
   var imageSrc = shopItem.getElementsByClassName("shop-item-image")[0].src;
-  var id = shopItem.dataset.itemId
+  var id = shopItem.dataset.itemId;
   addItemToCart(title, price, imageSrc, id);
   updateCartTotal();
 }
@@ -103,7 +103,7 @@ function addToCartClicked(event) {
 function addItemToCart(title, price, imageSrc, id) {
   var cartRow = document.createElement("div");
   cartRow.classList.add("cart-row");
-  cartRow.dataset.itemId = id
+  cartRow.dataset.itemId = id;
   var cartItems = document.getElementsByClassName("cart-items")[0];
   var cartItemNames = cartItems.getElementsByClassName("cart-item-title");
   for (var i = 0; i < cartItemNames.length; i++) {
