@@ -6,13 +6,13 @@ if (process.env.NODE_ENV !== "production") {
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
 const stripePublicKey = process.env.STRIPE_PUBLIC_KEY;
 
-const helmet = require("helmet")
+const helmet = require("helmet");
 
 const express = require("express");
 const app = express();
 const fs = require("fs");
 
-app.use(helmet())
+app.use(helmet());
 
 app.set("view engine", "ejs");
 // rnapp.set("views", path.join(__dirname, "views"));
@@ -60,4 +60,4 @@ app.post("/purchase", (req, res) => {
   });
 });
 
-module.exports = app;
+(module.exports = app), STRIPE_PUBLIC_KEY;

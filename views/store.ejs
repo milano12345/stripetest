@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Speaker Station | Store</title>
-        <meta name="description" content="This is the description">
+        <meta name="description" content="Buy Speakers For Less!">
         <link rel="stylesheet" href="styles.css" />
         <script src="https://checkout.stripe.com/checkout.js" defer></script>
         <script>
@@ -16,7 +16,7 @@
             <nav class="main-nav nav">
                 <ul>
                     <li><a href="index.html">HOME</a></li>
-                    <li><a href="store.html">STORE</a></li>
+                    <li><a href="#">STORE</a></li>
                     <li><a href="about.html">ABOUT</a></li>
                 </ul>
             </nav>
@@ -24,11 +24,14 @@
         </header>
         <section class="container content-section">
             <h2 class="section-header">Speakers</h2>
+            <h3 style="text-align: center;">Click the Picture to See Detailed Information</h3>
             <div class="shop-items">
                 <% items.music.forEach(function(item){ %>
                                     <div class="shop-item" data-item-id="<%= item.id %>">
                     <span class="shop-item-title"><%= item.name %></span>
-                    <img class="shop-item-image" src="Images/<%= item.imgName %>">
+                    <a href="<%= item.link %>">
+                        <img class="shop-item-image" src="Images/<%= item.imgName %>" >
+                        </a>
                     <div class="shop-item-details">
                         <span class="shop-item-price">$<%= item.price / 100 %></span>
                         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
@@ -66,7 +69,7 @@
                 <strong class="cart-total-title">Total</strong>
                 <span class="cart-total-price">$0</span>
             </div>
-            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+            <button class="btn btn-primary btn-purchase" type="button">PURCHASE NOW</button>
         </section>
         <footer class="main-footer">
             <div class="container main-footer-container">
