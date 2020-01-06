@@ -100,10 +100,10 @@ body {
 }
 
 .main-footer {
-    background-color: rgba(0, 0, 0, 0.6);
-    background-image: url("Images/Header Background.jpg");
-    background-blend-mode: multiply;
-    background-size: cover;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-image: url("Images/Header Background.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
   padding: 0.25em 0;
 }
 
@@ -340,7 +340,7 @@ body {
 .btn-purchase {
   display: block;
   margin: 40px auto 80px auto;
-  font-size: 1em;
+  font-size: 1.3em;
   width: 35%;
 }
 
@@ -505,21 +505,26 @@ button:hover:active:after,
 }
 
 .sale {
-    font-size: 1.7em;
-    line-height: 2em;
-    color: darkred;
-    font-weight: bold;
-  }
-  
-  .price {
-    font-size: 1.7em;
-  }
-  
-  .old {
-    font-size: 1.3em;
-    text-decoration: line-through;
-  }
-  
-  .flex-this {
-    display: flex;
-  }
+  font-size: 1.7em;
+  line-height: 2em;
+  color: darkred;
+  font-weight: bold;
+}
+
+.price {
+  font-size: 1.7em;
+}
+
+.old {
+  font-size: 1.3em;
+  text-decoration: line-through;
+}
+
+.flex-this {
+  display: flex;
+  font-size: 1.5em;
+}
+
+.speaker-header {
+  font-size: 1.5em;
+}
