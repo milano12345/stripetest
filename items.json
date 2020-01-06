@@ -4,7 +4,8 @@
       "id": 1,
       "name": "4600 Watts Bluetooth",
       "price": 11999,
-      "imgName": "couch.jpg"
+      "imgName": "couch.jpg",
+      "link": "speaker.html"
     },
     {
       "id": 2,
