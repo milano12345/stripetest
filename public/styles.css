@@ -503,3 +503,23 @@ button:hover:active:after,
 .button:hover:active:after {
   opacity: 0.1;
 }
+
+.sale {
+    font-size: 1.7em;
+    line-height: 2em;
+    color: darkred;
+    font-weight: bold;
+  }
+  
+  .price {
+    font-size: 1.7em;
+  }
+  
+  .old {
+    font-size: 1.3em;
+    text-decoration: line-through;
+  }
+  
+  .flex-this {
+    display: flex;
+  }

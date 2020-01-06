@@ -24,11 +24,15 @@
         </header>
         <section class="container content-section">
             <h2 class="section-header">Speakers</h2>
+            <h3 style="text-align: center;">Click the Picture to See Detailed Information</h3>
             <div class="shop-items">
                 <% items.music.forEach(function(item){ %>
                                     <div class="shop-item" data-item-id="<%= item.id %>">
                     <span class="shop-item-title"><%= item.name %></span>
-                    <img class="shop-item-image" src="Images/<%= item.imgName %>">
+                    <a href="<%= item.link %>">
+                        <img class="shop-item-image" src="Images/<%= item.imgName %>">
+                        </a>
+                    
                     <div class="shop-item-details">
                         <span class="shop-item-price">$<%= item.price / 100 %></span>
                         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
@@ -43,8 +47,7 @@
                 <% items.merch.forEach(function(item){ %>
                                     <div class="shop-item" data-item-id="<%= item.id %>">
                     <span class="shop-item-title"><%= item.name %></span>
-                    <a href="<%= item.link %>">
-                        <img class="shop-item-image" src="Images/<%= item.imgName %>"></a>
+                        <img class="shop-item-image" src="Images/<%= item.imgName %>">
                     <div class="shop-item-details">
                         <span class="shop-item-price">$<%= item.price / 100 %></span>
                         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
